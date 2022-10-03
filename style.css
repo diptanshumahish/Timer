@@ -19,10 +19,15 @@
     --font-timer: "Bebas Neue", cursive;
     --font-stsp: "Montserrat", sans-serif;
     --font-clr: #ffffff;
+    --bg-grad:radial-gradient(black,rgb(254, 243, 243)); 
+    
+}
+.darkTheme{
+    --bg-grad:radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(70,70,166,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 body {
-    background: radial-gradient(black,rgb(254, 243, 243)); 
+    background: var(--bg-grad);
     min-height: 100vh;
     overflow: hidden;
 }
@@ -99,4 +104,16 @@ body {
     height: 25px;
     color: #585858;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+#nav_theme{
+    position: absolute;
+    right: 0;
+    padding: 30px;
+    font-size: 30px;
+    color:var(--bg);
+    cursor: pointer;
+}
+#nav_theme:active{
+    transform: scale(0.3);
+    transition: all 300ms ease;
 }
